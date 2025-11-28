@@ -399,7 +399,7 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             .logo {
-                font-size: 3rem; /* Ajuste para móviles */
+                font-size: 3rem;
             }
             
             .social-icons a {
@@ -686,11 +686,12 @@
             box-shadow: 0 10px 25px rgba(16, 185, 129, 0.7);
         }
 
-        /* WiFi Button */
-        .wifi-button {
+        /* Floating WiFi Button - Centered below SUMAK logo */
+        .wifi-floating-btn {
             position: fixed;
-            top: 100px;
-            right: 20px;
+            top: 120px; /* Positioned below the logo */
+            left: 50%;
+            transform: translateX(-50%);
             background: #3b82f6;
             color: white;
             padding: 15px 25px;
@@ -705,12 +706,12 @@
             gap: 10px;
         }
 
-        .wifi-button:hover {
-            transform: translateY(-3px) scale(1.05);
+        .wifi-floating-btn:hover {
+            transform: translateX(-50%) translateY(-3px) scale(1.05);
             box-shadow: 0 10px 25px rgba(59, 130, 246, 0.7);
         }
 
-        .wifi-button i {
+        .wifi-floating-btn i {
             font-size: 1.2rem;
         }
     </style>
@@ -744,6 +745,12 @@
         </div>
     </header>
 
+    <!-- Floating WiFi Button - Centered below SUMAK logo -->
+    <a href="https://www.facebook.com/profile.php?id=61576603961881" class="wifi-floating-btn" target="_blank">
+        <i class="fas fa-wifi"></i>
+        wifi (gratis x face)
+    </a>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
@@ -774,7 +781,7 @@
                     <i class="fas fa-star star" data-rating="5"></i>
                 </div>
                 <p>Ayúdanos a mejorar continuamente con tu opinión</p>
-                <a href="https://www.google.com/maps/place/SUMAK/@-32.8949517,-68.829301,19z/data=!3m1!4b1!4m16!1m9!3m8!1s0x967e09a1dd6eefdd:0x698ad41b5908215c!2sSUMAK!8m2!3d-32.8949528!4d-68.8286573!9m1!1b1!16s%2Fg%2F11xgssdlt9!3m5!1s0x967e09a1dd6eefdd:0x698ad41b5908215c!8m2!3d-32.8949528!4d-68.8286573!9m1!1b1!16s%2Fg%2F11xgssdlt9!3m5!1s0x967e09a1dd6eefdd:0x698ad41b5908215c!8m2!3d-32.8949528!4d-68.8286573!16s%2Fg%2F11xgssdlt9!3m7!1s0x967e09a1dd6eefdd:0x698ad41b5908215c!8m2!3d-32.8949528!4d-68.8286573!9m1!1b1!16s%2Fg%2F11xgssdlt9!3m5!1s0x967e09a1dd6eefdd:0x698ad41b5908215c!8m2!3d-32.8949528!4d-68.8286573!16s%2Fg%2F11xgssdlt9?entry=ttu&g_ep=EgoyMDI1MTEwOS4wIKXMDSoASAFQAw%3D%3D" class="rating-btn" target="_blank">
+                <a href="https://www.google.com/maps/place/SUMAK/@-32.8949517,-68.829301,19z/data=!3m1!4b1!4m16!1m9!3m8!1s0x967e09a1dd6eefdd:0x698ad41b5908215c!2sSUMAK!8m2!3d-32.8949528!4d-68.8286573!9m1!1b1!16s%2Fg%2F11xgssdlt9!3m5!1s0x967e09a1dd6eefdd:0x698ad41b5908215c!8m2!3d-32.8949528!4d-68.8286573!9m1!1b1!16s%2Fg%2F11xgssdlt9!3m7!1s0x967e09a1dd6eefdd:0x698ad41b5908215c!8m2!3d-32.8949528!4d-68.8286573!9m1!1b1!16s%2Fg%2F11xgssdlt9!3m5!1s0x967e09a1dd6eefdd:0x698ad41b5908215c!8m2!3d-32.8949528!4d-68.8286573!16s%2Fg%2F11xgssdlt9?entry=ttu&g_ep=EgoyMDI1MTEwOS4wIKXMDSoASAFQAw%3D%3D" class="rating-btn" target="_blank">
                     Calificar en Google Maps
                 </a>
             </div>
@@ -800,12 +807,6 @@
             <p>&copy; 2024 SUMAK Restaurante Boliviano. Todos los derechos reservados.</p>
         </div>
     </footer>
-
-    <!-- WiFi Button -->
-    <a href="https://www.facebook.com/profile.php?id=61576603961881" class="wifi-button" target="_blank">
-        <i class="fas fa-wifi"></i>
-        (x face)
-    </a>
 
     <!-- Save Notification -->
     <div id="saveNotification" class="save-notification">
@@ -865,7 +866,7 @@
             {
                 name: "Sopa de Mani",
                 price: 3500,
-                image: "https://comidasbolivianas.org/wp-content/uploads/2020/09/%F0%9F%87%A7%F0%9F%87%B4-Sopa-de-Mani-12-7-screenshot.png",
+                image: "https://i.imgur.com/wsXLi1U",
                 description: "Sopa tradicional boliviana hecha con maní, alita de pollo, papas y verduras.",
                 whatsappLink: "https://wa.me/p/25005123959173299/5492617526242",
                 hidden: false
@@ -1512,7 +1513,7 @@
                     updateStars();
                     
                     // Redirect to Google Maps when a star is clicked
-                    window.open('https://www.google.com/maps/place/SUMAK/@-32.8949517,-68.829301,19z/data=!3m1!4b1!4m16!1m9!3m8!1s0x967e09a1dd6eefdd:0x698ad41b5908215c!2sSUMAK!8m2!3d-32.8949528!4d-68.8286573!9m1!1b1!16s%2Fg%2F11xgssdlt9!3m5!1s0x967e09a1dd6eefdd:0x698ad41b5908215c!8m2!3d-32.8949528!4d-68.8286573!9m1!1b1!16s%2Fg%2F11xgssdlt9!3m5!1s0x967e09a1dd6eefdd:0x698ad41b5908215c!8m2!3d-32.8949528!4d-68.8286573!16s%2Fg%2F11xgssdlt9!3m7!1s0x967e09a1dd6eefdd:0x698ad41b5908215c!8m2!3d-32.8949528!4d-68.8286573!9m1!1b1!16s%2Fg%2F11xgssdlt9!3m5!1s0x967e09a1dd6eefdd:0x698ad41b5908215c!8m2!3d-32.8949528!4d-68.8286573!16s%2Fg%2F11xgssdlt9?entry=ttu&g_ep=EgoyMDI1MTEwOS4wIKXMDSoASAFQAw%3D%3D', '_blank');
+                    window.open('https://www.google.com/maps/place/SUMAK/@-32.8949517,-68.829301,19z/data=!3m1!4b1!4m18!1m9!3m8!1s0x967e09a1dd6eefdd:0x698ad41b5908215c!2sSUMAK!8m2!3d-32.8949528!4d-68.8286573!9m1!1b1!16s%2Fg%2F11xgssdlt9!3m5!1s0x967e09a1dd6eefdd:0x698ad41b5908215c!8m2!3d-32.8949528!4d-68.8286573!9m1!1b1!16s%2Fg%2F11xgssdlt9!3m7!1s0x967e09a1dd6eefdd:0x698ad41b5908215c!8m2!3d-32.8949528!4d-68.8286573!9m1!1b1!16s%2Fg%2F11xgssdlt9!3m5!1s0x967e09a1dd6eefdd:0x698ad41b5908215c!8m2!3d-32.8949528!4d-68.8286573!16s%2Fg%2F11xgssdlt9?entry=ttu&g_ep=EgoyMDI1MTEwOS4wIKXMDSoASAFQAw%3D%3D', '_blank');
                 });
 
                 star.addEventListener('mouseenter', function() {
